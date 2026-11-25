@@ -22,6 +22,7 @@ func DodajPostajo(oznaka string, ime, kraj string) {
 	}
 }
 
+// Doda meritev med min in max temperaturo
 func DodajMeritev(oznaka string, temperatura, min, max float64) {
 	if temperatura < min || temperatura > max {
 		fmt.Printf("Temperatura ni v pravem obmocju")
@@ -59,6 +60,7 @@ func statistika(oznaka string, stMeritev int) (najnizja, najvisja, povprecna flo
 	return najnizja, najvisja, povprecna, ok
 }
 
+// Izpis meritev za vsako postajo
 func IzpisMeritev() {
 	fmt.Println("MERITVE:")
 	for oznaka, postaja := range postaje {
@@ -67,6 +69,7 @@ func IzpisMeritev() {
 	}
 }
 
+// Izpis statističnega poročila za vsako postajo
 func IzpisPorocila(stMeritev int) {
 	fmt.Println("POROČILO:")
 	for oznaka, postaja := range postaje {
