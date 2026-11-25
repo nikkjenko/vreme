@@ -15,6 +15,7 @@ type Postaja struct {
 
 var postaje = make(map[string]Postaja)
 
+// Doda postajo v slovar z oznako, imenom in krajem
 func DodajPostajo(oznaka string, ime, kraj string) {
 	postaje[oznaka] = Postaja{
 		ime:  ime,
